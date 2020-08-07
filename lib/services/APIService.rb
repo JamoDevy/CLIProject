@@ -7,6 +7,7 @@ class APIService
     def fetch_people_by_name(name)
         uri = URI(BASE_URI + "people/?search=#{name}")
         people = make_request(uri)
+        binding.pry
         if people
             People.new(people)
         else
