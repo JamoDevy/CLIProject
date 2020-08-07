@@ -23,11 +23,11 @@ attr_reader :name, :height, :eye_color, :gender
 
     def pretty_print
         puts @name
-        puts "Height:"
+        print "Height:---"
         puts @height
-        puts "Eye color:"
+        print "Eye color:---"
         puts @eye_color
-        puts "Gender:"
+        print "Gender:---"
         puts @gender
 
     end

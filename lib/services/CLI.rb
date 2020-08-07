@@ -16,15 +16,14 @@ class CLI
 
   def welcome
   puts "---Welcome to a galaxy far far away!---".colorize(:blue)
-
-  "\n"
   
   end
+  "\n"
 
 
 
   def main_menu
-    puts "What would you like to search for?"
+    puts "What would you like to search for?".colorize(:green)
     puts "1. Search for People"
     puts "2. Search for Planets"
     puts "3. Search for Vehicles"
@@ -50,7 +49,7 @@ class CLI
   end
 
   def search_for_people
-    print "Who would you like to look up? "
+    print "Who would you like to look up? ".colorize(:green)
     input = gets.chomp
     people = @api.fetch_people_by_name(input)
     puts people.pretty_print
@@ -58,7 +57,7 @@ class CLI
   end
  
   def search_for_planet
-    print "What planet would you like to look up? "
+    print "What planet would you like to look up? ".colorize(:green)
     input = gets.chomp
     planet = @api.fetch_planet_by_name(input)
     puts planet.pretty_print
@@ -66,14 +65,14 @@ class CLI
   end
 
   def search_for_vehicle
-    print "What vehicle would you like to look up? "
+    print "What vehicle would you like to look up? ".colorize(:green)
     input = gets.chomp
     vehicle = @api.fetch_vehicle_by_name(input)
     puts vehicle.pretty_print
   end
 
   def search_for_starship
-    print "What starship would you like to look up? "
+    print "What starship would you like to look up? ".colorize(:green)
     input =gets.chomp
     starship = @api.fetch_starship_by_name(input)
     puts starship.pretty_print
