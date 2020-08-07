@@ -7,16 +7,13 @@ class APIService
     def fetch_people_by_name(name)
         uri = URI(BASE_URI + "people/?search=#{name}")
         people = make_request(uri)
-       
         if people
             People.new(people)
         else
             "Couldn't find a person with that name.".colorize(:red)
         end
-    
-        
-    end
 
+    end
 
     def fetch_planet_by_name(name)
         uri = URI(BASE_URI + "planets/?search=#{name}")

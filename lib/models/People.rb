@@ -2,31 +2,35 @@ require "pry"
 
 class People
 
-attr_reader :name, :species, :homeworld, :film
+attr_reader :name, :height, :eye_color, :gender
 
 @@all = []
 
     def initialize(people_data)
         @name = people_data["name"]
-        @species = people_data["species"]
-        @homeworld = people_data["homeworld"]
-        @films = people_data["films"]
+        @height = people_data["height"]
+        @eye_color = people_data["eye_color"]
+        @gender = people_data["gender"]
 
         @@all << self
+  
     end
-
 
     def self.all
         @@all
     end
+        
 
-    def self.find_by_name(name)
-        @@all.find {|people| people.name.downcase == name.downcase}
+    def pretty_print
+        puts @name
+        puts "Height:"
+        puts @height
+        puts "Eye color:"
+        puts @eye_color
+        puts "Gender:"
+        puts @gender
+
     end
-
-
-
-
 
 end
 

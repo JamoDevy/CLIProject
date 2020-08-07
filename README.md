@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+TODO: Once installed run the program with 'ruby bin/run' to open up the main menu prompt. From here you can search details of different people, planets, vehicles, and starships from the Star Wars universe! Out of these four options the program will pull its object/character data from the SWAPI (Star Wars API) website. Once finished simply put '5' and you will exit the program. May the force be with you!
 
 ## Development
 

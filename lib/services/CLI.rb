@@ -43,8 +43,8 @@ class CLI
       search_for_starship
     elsif @user_input == "5"
       #exit
-    else
-      "Invalid input".colorize(:red)
+    else 
+      puts "Invalid input".colorize(:red)
     end
    
   end
@@ -53,15 +53,15 @@ class CLI
     print "Who would you like to look up? "
     input = gets.chomp
     people = @api.fetch_people_by_name(input)
-    puts people
+    puts people.pretty_print
     
   end
-
+ 
   def search_for_planet
     print "What planet would you like to look up? "
     input = gets.chomp
     planet = @api.fetch_planet_by_name(input)
-    puts planet
+    puts planet.pretty_print
 
   end
 
@@ -69,14 +69,14 @@ class CLI
     print "What vehicle would you like to look up? "
     input = gets.chomp
     vehicle = @api.fetch_vehicle_by_name(input)
-    puts vehicle
+    puts vehicle.pretty_print
   end
 
   def search_for_starship
     print "What starship would you like to look up? "
     input =gets.chomp
     starship = @api.fetch_starship_by_name(input)
-    puts starship
+    puts starship.pretty_print
   end
    
 end
