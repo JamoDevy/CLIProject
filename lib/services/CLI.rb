@@ -57,7 +57,26 @@ class CLI
     
   end
 
+  def search_for_planet
+    print "What planet would you like to look up? "
+    input = gets.chomp
+    planet = @api.fetch_planet_by_name(input)
+    puts planet
 
+  end
 
+  def search_for_vehicle
+    print "What vehicle would you like to look up? "
+    input = gets.chomp
+    vehicle = @api.fetch_vehicle_by_name(input)
+    puts vehicle
+  end
 
+  def search_for_starship
+    print "What starship would you like to look up? "
+    input =gets.chomp
+    starship = @api.fetch_starship_by_name(input)
+    puts starship
+  end
+   
 end

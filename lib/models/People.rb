@@ -6,7 +6,7 @@ attr_reader :name, :species, :homeworld, :film
 
 @@all = []
 
-    def initialize(people_data)
+    def initialize(people)
         @name = people_data["name"]
         @species = people_data["species"]
         @homeworld = people_data["homeworld"]
@@ -21,8 +21,10 @@ attr_reader :name, :species, :homeworld, :film
     end
 
     def self.find_by_name(name)
-        @@all.find{|people| people.name.downcase == name.downcase}
+        @@all.find {|people| people.name.downcase == name.downcase}
     end
+
+
 
 end
 
