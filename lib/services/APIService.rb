@@ -1,6 +1,6 @@
 class APIService
 
-    BASE_URI = "https://swapi.dev/api/"
+    BASE_URI = "https://swapi.dev/api/people/"
 
     def fetch_people_by_name(name)
         uri = URI(BASE_URI + "?name=#{name}")
@@ -11,6 +11,7 @@ class APIService
             "Couldn't find a person with that name.".colorize(:red)
         end
     end
+
 
     def fetch_planet_by_name(name)
         uri = URI(BASE_URI + "?name=#{name}")
@@ -43,6 +44,10 @@ class APIService
     end
 
     def make_request(uri)
-        response = NET::HTTP.get_response(uri)
+        response = Net::HTTP.get_response(uri)
         JSON.parse(response.body)
     end
+
+
+    
+end

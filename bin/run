@@ -1,6 +1,5 @@
-#!/user/bin/ruby -WO
+#!/usr/bin/ruby - WO
 
-require_relative "../config/environment.rb
+require_relative "../config/environment.rb"
 
 CLI.new.run
-
