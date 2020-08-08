@@ -20,11 +20,11 @@ attr_reader :name, :terrain, :climate, :population
 
     def pretty_print
         puts @name
-        puts "Terrain: "
+        print "Terrain:--- "
         puts @terrain
-        puts "Climate: "
+        print "Climate:--- "
         puts @climate
-        puts "Population: "
+        print "Population:--- "
         puts @population
     end
 

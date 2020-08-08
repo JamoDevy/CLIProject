@@ -20,11 +20,11 @@ attr_reader :name, :manufacturer, :cost_in_credits, :passengers
 
     def pretty_print
         puts @name
-        puts "Manufacturer: "
+        print "Manufacturer:--- "
         puts @manufacturer
-        puts "Cost in credits: "
+        print "Cost in credits:--- "
         puts @cost_in_credits
-        puts "Passengers: "
+        print "Passengers:--- "
         puts @passengers
     end
 

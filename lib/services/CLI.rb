@@ -15,10 +15,11 @@ class CLI
 
 
   def welcome
-  puts "---Welcome to a galaxy far far away!---".colorize(:blue)
-  
+  puts
+  puts "---Welcome to a galaxy far far away!---".colorize(:blue) 
+  puts
   end
-  "\n"
+  
 
 
 
