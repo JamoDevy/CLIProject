@@ -21,7 +21,7 @@ class CLI
   end
   
 
-
+ 
 
   def main_menu
     puts "What would you like to search for?".colorize(:green)
@@ -53,15 +53,25 @@ class CLI
     print "Who would you like to look up? ".colorize(:green)
     input = gets.chomp
     people = @api.fetch_people_by_name(input)
-    puts people.pretty_print
-    
+    if people 
+      puts people.pretty_print
+    else
+      puts
+      puts "Could not find a person by that name.".colorize(:red)
+      puts
+    end    
+
   end
  
   def search_for_planet
     print "What planet would you like to look up? ".colorize(:green)
     input = gets.chomp
     planet = @api.fetch_planet_by_name(input)
-    puts planet.pretty_print
+    if planet
+      puts planet.pretty_print
+    else
+      puts "Could not find a planet by that name.".colorize(:red)
+    end
 
   end
 
@@ -69,14 +79,22 @@ class CLI
     print "What vehicle would you like to look up? ".colorize(:green)
     input = gets.chomp
     vehicle = @api.fetch_vehicle_by_name(input)
-    puts vehicle.pretty_print
+    if vehicle
+      puts vehicle.pretty_print
+    else
+      puts "Could not find a vehicle by that name.".colorize(:red)
+    end
   end
 
   def search_for_starship
     print "What starship would you like to look up? ".colorize(:green)
     input =gets.chomp
     starship = @api.fetch_starship_by_name(input)
-    puts starship.pretty_print
+    if starship
+      puts starship.pretty_print
+    else
+      puts "Could not find a starship by that name.".colorize(:red)
+    end
   end
    
 end

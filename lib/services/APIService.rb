@@ -7,10 +7,11 @@ class APIService
     def fetch_people_by_name(name)
         uri = URI(BASE_URI + "people/?search=#{name}")
         people = make_request(uri)
+        
         if people["results"][0]
             People.new(people["results"][0])
         else
-            "Couldn't find a person with that name.".colorize(:red)
+            nil
         end
 
     end
@@ -21,7 +22,7 @@ class APIService
         if planet["results"][0]
             Planet.new(planet["results"][0])
         else
-            "Couldn't find a planet with that name.".colorize(:red)
+            nil
         end
     end
 
@@ -31,7 +32,7 @@ class APIService
         if starship["results"][0]
             Starship.new(starship)
         else
-            "Couldn't find a starship by that name.".colorize(:red)
+            nil
         end
     end
 
@@ -42,7 +43,7 @@ class APIService
             Vehicle.new(vehicle["results"][0])
 
         else
-            "Couldn't find a vehicle with that name.".colorize(:red)
+            nil
         end 
     end
 

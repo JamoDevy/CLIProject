@@ -2,9 +2,9 @@ require "pry"
 
 class People
 
-attr_reader :name, :height, :eye_color, :gender
+    attr_reader :name, :height, :eye_color, :gender
 
-@@all = []
+    @@all = []
 
     def initialize(people_data)
         @name = people_data["name"]
@@ -16,9 +16,16 @@ attr_reader :name, :height, :eye_color, :gender
   
     end
 
+    def return_names
+        @@all.each do |name| name
+        end
+    end
+    
+
     def self.all
         @@all
     end
+
         
 
     def pretty_print
@@ -33,7 +40,6 @@ attr_reader :name, :height, :eye_color, :gender
     end
 
 end
-
 
 
 
